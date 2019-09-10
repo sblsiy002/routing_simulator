@@ -50,6 +50,7 @@ class Extract:
 
         out=open("static/"+self.filename.split('.')[0]+".json","w")
         out.write(json.dumps({'links':edges, 'nodes':nodes}, indent=4))
+        out.close()
 
     def convert_node(self, type, id):
         temp_list = dict()
